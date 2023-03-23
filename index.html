@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    body{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #92DCE5;
+    }
+
+    main{
+        width: 80vw;
+        height: 80vh;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17)
+         0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        background-color: #92DCE5;
+        display: flex;
+        border-radius: 20px;
+        align-items: center;
+    }
+
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 65px;
+        padding: 5px;
+        justify-content: space-evenly
+    }
+
+    button{
+        width: 240px;
+        height: 80px;
+        border-radius: 20px;
+        font-size: 20px;
+        background-color: #EEE5E9;
+        border: 0px;
+    }
+
+    button:hover{
+        background-color: #D64933;
+        color: #EEE5E9;
+        cursor: pointer;
+    }
+
+    .resultado{
+        background-color: #7C7C7C;
+        width: 90%;
+        height: 96%;
+        border-radius: 20px;
+        padding: 8px;
+        margin: 0px 10px 0px 5px;
+        color: #EEE5E9;
+        font-size: 20px;
+    }
+</style>
+<body>
+    <main>
+        <div class="buttons">
+            <button onclick="exibirTextoAmazonia()">Floresta Amazônica</button>
+            <button onclick="exibirTextoTaiga()">Taiga Siberiana</button>
+            <button onclick="exibirTextoCongo()">Floresta do Congo</button>
+        </div>
+        <div class="resultado">
+            
+        </div>
+    </main>
+    <script>
+        function exibirTextoAmazonia() {
+            document.querySelector('.resultado').textContent = 'A Floresta Amazônica é a maior floresta tropical do mundo, estendendo-se por cerca de 5,5 milhões de km² na América do Sul, abrangendo nove países, incluindo o Brasil. É o lar de milhões de espécies de plantas e animais, muitos dos quais são encontrados apenas nesta região. A floresta é essencial para a regulação do clima global, produção de oxigênio e armazenamento de carbono, bem como para a sobrevivência das populações indígenas que dependem dela para suas necessidades básicas. Infelizmente, a Floresta Amazônica tem sido alvo de desmatamento em grande escala para a criação de pastagens, agricultura e extração de madeira, o que tem levado a perda de biodiversidade e afetado negativamente o clima global.';
+        }
+        function exibirTextoTaiga() {
+            document.querySelector('.resultado').textContent = 'A Taiga Siberiana, também conhecida como Floresta Boreal, é a maior floresta do mundo, estendendo-se por cerca de 13 milhões de km² na Rússia, Canadá, Noruega e Suécia. A taiga é composta principalmente de coníferas, como pinheiros e abetos, e é o lar de muitas espécies de animais, como alces, ursos e lobos. A taiga é importante para a regulação do clima global, armazenamento de carbono e produção de oxigênio. A extração de madeira e a mineração são as principais ameaças à taiga siberiana, o que leva à degradação dos ecossistemas e à perda de biodiversidade.';
+        }
+        function exibirTextoCongo() {
+            document.querySelector('.resultado').textContent = 'A Floresta do Congo é a segunda maior floresta tropical do mundo, estendendo-se por cerca de 2 milhões de km² na África Central, abrangendo vários países, incluindo a República Democrática do Congo e a República do Congo. A floresta é o lar de muitas espécies de animais e plantas, muitas das quais são encontradas apenas nesta região. A floresta do Congo é importante para a regulação do clima global, produção de oxigênio e armazenamento de carbono, bem como para a subsistência das populações indígenas. A principal ameaça à floresta do Congo é a extração ilegal de madeira e a conversão de terras para agricultura e mineração, o que leva à perda de biodiversidade e afeta negativamente o clima global.';
+        }
+    </script>
+</body>
